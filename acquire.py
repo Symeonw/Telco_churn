@@ -1,6 +1,5 @@
-
-import stats
 from env import host, user, password
+import pandas as pd
 url = f'mysql+pymysql://{user}:{password}@{host}/telco_churn'
 def get_telco():
     df = pd.read_sql('''select * from customers join contract_types using 
